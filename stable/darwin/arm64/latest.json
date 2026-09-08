@@ -1,9 +1,9 @@
 {
-  "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06022/MimikkAI Editor-darwin-arm64-1.135.06022.zip",
-  "name": "1.135.06022",
-  "version": "82ca98cdaca9aff8c16e26dfcdc63f92bdfa5c53",
-  "productVersion": "1.135.6022.0",
-  "hash": "83b0ec5ef071f84331aeb2a16a09e66b121dd857",
-  "timestamp": "1788821975149",
-  "sha256hash": "9e8c0cdb75809fd7a8bfc322ba70f56cccf1582422081459f91f45fd848fe160"
+  "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06023/MimikkAI Editor-darwin-arm64-1.135.06023.zip",
+  "name": "1.135.06023",
+  "version": "61844ebe77a55b29d83d31361ceb9db1b8d3b7d1",
+  "productVersion": "1.135.6023.0",
+  "hash": "20309e82ba0a6c718083d45a10a06c59678e7940",
+  "timestamp": "1788827501727",
+  "sha256hash": "7109b05275e66bb924991bb276c67bb1e42bcb18feba4d6dffbe048af7934d2b"
 }
