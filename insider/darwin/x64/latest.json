@@ -1,9 +1,9 @@
 {
-  "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06022-insider/MimikkAI Editor-darwin-x64-1.135.06022-insider.zip",
-  "name": "1.135.06022-insider",
-  "version": "82ca98cdaca9aff8c16e26dfcdc63f92bdfa5c53",
-  "productVersion": "1.135.6022.0-insider",
-  "hash": "0a32a0ca50dd33e817c503f789e82a16e7c82be9",
-  "timestamp": "1788825176493",
-  "sha256hash": "05485a64edfec032a8808af4e11e36d2237fb205565948763eec2ff83b9c30ac"
+  "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06023-insider/MimikkAI Editor-darwin-x64-1.135.06023-insider.zip",
+  "name": "1.135.06023-insider",
+  "version": "61844ebe77a55b29d83d31361ceb9db1b8d3b7d1",
+  "productVersion": "1.135.6023.0-insider",
+  "hash": "3b84e6a7e41c2885e41b8d86ee7577e963b03758",
+  "timestamp": "1788828805051",
+  "sha256hash": "831af51c9ce224f28a99aa0f2bc444ea51c91f2fc3adf4a2f513336cfb3937a4"
 }
