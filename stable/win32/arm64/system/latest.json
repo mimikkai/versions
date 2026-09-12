@@ -1,9 +1,9 @@
 {
-  "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06060/MimikkAI EditorSetup-arm64-1.135.06060.exe",
-  "name": "1.135.06060",
-  "version": "cdefc97a90975706c2e2f03585c25c687648c4c4",
-  "productVersion": "1.135.6060.0",
-  "hash": "3032a2adf2318836711633a7830c7a819c67129b",
-  "timestamp": "1788959260987",
-  "sha256hash": "6d609170cc1801994a507059e2ba4030ebb5f567112ffc40dc2ebd85e663d7b6"
+  "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI EditorSetup-arm64-1.135.06128.exe",
+  "name": "1.135.06128",
+  "version": "e206eb464964bad4f8732445ed36790f3277b5d5",
+  "productVersion": "1.135.6128.0",
+  "hash": "3d6f492938540d8d0c95325c3a6862b11815b594",
+  "timestamp": "1789210458433",
+  "sha256hash": "83f8c710996ec8ceaa81f21d72d636e3a277f49e2b1d54fa7228b081d7e6320f"
 }
