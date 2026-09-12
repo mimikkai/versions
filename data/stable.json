@@ -3,84 +3,72 @@
     "path": "stable/darwin/arm64",
     "name": "1.135.06060",
     "productVersion": "1.135.6060.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06060/MimikkAI Editor-darwin-arm64-1.135.06060.zip",
-    "timestamp": "1789023586772"
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06060/MimikkAI Editor-darwin-arm64-1.135.06060.zip"
   },
   {
     "path": "stable/darwin/x64",
     "name": "1.135.06060",
     "productVersion": "1.135.6060.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06060/MimikkAI Editor-darwin-x64-1.135.06060.zip",
-    "timestamp": "1789024109566"
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06060/MimikkAI Editor-darwin-x64-1.135.06060.zip"
   },
   {
     "path": "stable/linux/arm64",
     "name": "1.135.06128",
     "productVersion": "1.135.6128.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI Editor-linux-arm64-1.135.06128.tar.gz",
-    "timestamp": "1789209084968"
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI Editor-linux-arm64-1.135.06128.tar.gz"
   },
   {
     "path": "stable/linux/x64",
-    "name": "1.135.06128",
-    "productVersion": "1.135.6128.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI Editor-linux-x64-1.135.06128.tar.gz",
-    "timestamp": "1789209284215"
+    "name": "1.135.06131",
+    "productVersion": "1.135.6131.0",
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06131/MimikkAI Editor-linux-x64-1.135.06131.tar.gz"
   },
   {
     "path": "stable/win32/arm64/archive",
     "name": "1.135.06128",
     "productVersion": "1.135.6128.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI Editor-win32-arm64-1.135.06128.zip",
-    "timestamp": "1789210458904"
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI Editor-win32-arm64-1.135.06128.zip"
   },
   {
     "path": "stable/win32/arm64/system",
     "name": "1.135.06128",
     "productVersion": "1.135.6128.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI EditorSetup-arm64-1.135.06128.exe",
-    "timestamp": "1789210458433"
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI EditorSetup-arm64-1.135.06128.exe"
   },
   {
     "path": "stable/win32/arm64/user",
     "name": "1.135.06128",
     "productVersion": "1.135.6128.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI EditorUserSetup-arm64-1.135.06128.exe",
-    "timestamp": "1789210458684"
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI EditorUserSetup-arm64-1.135.06128.exe"
   },
   {
     "path": "stable/win32/x64/archive",
     "name": "1.135.06128",
     "productVersion": "1.135.6128.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI Editor-win32-x64-1.135.06128.zip",
-    "timestamp": "1789212090878"
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI Editor-win32-x64-1.135.06128.zip"
   },
   {
     "path": "stable/win32/x64/msi",
     "name": "1.135.06128",
     "productVersion": "1.135.6128.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI Editor-x64-1.135.06128.msi",
-    "timestamp": "1789212091097"
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI Editor-x64-1.135.06128.msi"
   },
   {
     "path": "stable/win32/x64/msi-updates-disabled",
     "name": "1.135.06128",
     "productVersion": "1.135.6128.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI Editor-x64-updates-disabled-1.135.06128.msi",
-    "timestamp": "1789212091316"
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI Editor-x64-updates-disabled-1.135.06128.msi"
   },
   {
     "path": "stable/win32/x64/system",
     "name": "1.135.06128",
     "productVersion": "1.135.6128.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI EditorSetup-x64-1.135.06128.exe",
-    "timestamp": "1789212090378"
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI EditorSetup-x64-1.135.06128.exe"
   },
   {
     "path": "stable/win32/x64/user",
     "name": "1.135.06128",
     "productVersion": "1.135.6128.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI EditorUserSetup-x64-1.135.06128.exe",
-    "timestamp": "1789212090628"
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI EditorUserSetup-x64-1.135.06128.exe"
   }
 ]
