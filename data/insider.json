@@ -3,90 +3,105 @@
     "path": "insider/darwin/arm64",
     "name": "1.135.06039-insider",
     "productVersion": "1.135.6039.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI Editor-darwin-arm64-1.135.06039-insider.zip"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI Editor-darwin-arm64-1.135.06039-insider.zip",
+    "timestamp": "1788903701048"
   },
   {
     "path": "insider/darwin/x64",
     "name": "1.135.06039-insider",
     "productVersion": "1.135.6039.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI Editor-darwin-x64-1.135.06039-insider.zip"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI Editor-darwin-x64-1.135.06039-insider.zip",
+    "timestamp": "1788902935646"
   },
   {
     "path": "insider/linux/arm64",
     "name": "1.135.05953-insider",
     "productVersion": "1.135.5953.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.05953-insider/MimikkAI Editor-linux-arm64-1.135.05953-insider.tar.gz"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.05953-insider/MimikkAI Editor-linux-arm64-1.135.05953-insider.tar.gz",
+    "timestamp": "1788579978310"
   },
   {
     "path": "insider/linux/loong64",
     "name": "1.135.05953-insider",
     "productVersion": "1.135.5953.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.05953-insider/MimikkAI Editor-linux-loong64-1.135.05953-insider.tar.gz"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.05953-insider/MimikkAI Editor-linux-loong64-1.135.05953-insider.tar.gz",
+    "timestamp": "1788573489075"
   },
   {
     "path": "insider/linux/ppc64le",
     "name": "1.135.05953-insider",
     "productVersion": "1.135.5953.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.05953-insider/MimikkAI Editor-linux-ppc64le-1.135.05953-insider.tar.gz"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.05953-insider/MimikkAI Editor-linux-ppc64le-1.135.05953-insider.tar.gz",
+    "timestamp": "1788574761295"
   },
   {
     "path": "insider/linux/riscv64",
     "name": "1.135.05953-insider",
     "productVersion": "1.135.5953.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.05953-insider/MimikkAI Editor-linux-riscv64-1.135.05953-insider.tar.gz"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.05953-insider/MimikkAI Editor-linux-riscv64-1.135.05953-insider.tar.gz",
+    "timestamp": "1788574393243"
   },
   {
     "path": "insider/linux/x64",
     "name": "1.135.05953-insider",
     "productVersion": "1.135.5953.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.05953-insider/MimikkAI Editor-linux-x64-1.135.05953-insider.tar.gz"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.05953-insider/MimikkAI Editor-linux-x64-1.135.05953-insider.tar.gz",
+    "timestamp": "1788573741637"
   },
   {
     "path": "insider/win32/arm64/archive",
     "name": "1.135.06039-insider",
     "productVersion": "1.135.6039.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI Editor-win32-arm64-1.135.06039-insider.zip"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI Editor-win32-arm64-1.135.06039-insider.zip",
+    "timestamp": "1788892748069"
   },
   {
     "path": "insider/win32/arm64/system",
     "name": "1.135.06039-insider",
     "productVersion": "1.135.6039.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI EditorSetup-arm64-1.135.06039-insider.exe"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI EditorSetup-arm64-1.135.06039-insider.exe",
+    "timestamp": "1788892747568"
   },
   {
     "path": "insider/win32/arm64/user",
     "name": "1.135.06039-insider",
     "productVersion": "1.135.6039.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI EditorUserSetup-arm64-1.135.06039-insider.exe"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI EditorUserSetup-arm64-1.135.06039-insider.exe",
+    "timestamp": "1788892747819"
   },
   {
     "path": "insider/win32/x64/archive",
     "name": "1.135.06039-insider",
     "productVersion": "1.135.6039.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI Editor-win32-x64-1.135.06039-insider.zip"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI Editor-win32-x64-1.135.06039-insider.zip",
+    "timestamp": "1788894370441"
   },
   {
     "path": "insider/win32/x64/msi",
     "name": "1.135.06039-insider",
     "productVersion": "1.135.6039.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI Editor-x64-1.135.06039-insider.msi"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI Editor-x64-1.135.06039-insider.msi",
+    "timestamp": "1788894370660"
   },
   {
     "path": "insider/win32/x64/msi-updates-disabled",
     "name": "1.135.06039-insider",
     "productVersion": "1.135.6039.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI Editor-x64-updates-disabled-1.135.06039-insider.msi"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI Editor-x64-updates-disabled-1.135.06039-insider.msi",
+    "timestamp": "1788894370885"
   },
   {
     "path": "insider/win32/x64/system",
     "name": "1.135.06039-insider",
     "productVersion": "1.135.6039.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI EditorSetup-x64-1.135.06039-insider.exe"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI EditorSetup-x64-1.135.06039-insider.exe",
+    "timestamp": "1788894369997"
   },
   {
     "path": "insider/win32/x64/user",
     "name": "1.135.06039-insider",
     "productVersion": "1.135.6039.0-insider",
-    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI EditorUserSetup-x64-1.135.06039-insider.exe"
+    "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI EditorUserSetup-x64-1.135.06039-insider.exe",
+    "timestamp": "1788894370216"
   }
 ]

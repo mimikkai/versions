@@ -14,14 +14,21 @@
   header { text-align: center; padding: 48px 16px 24px; }
   header h1 { margin: 0 0 8px; font-size: 2rem; }
   header p { margin: 0; color: var(--muted); }
-  main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 64px; }
+  main { max-width: 1200px; margin: 0 auto; padding: 24px 16px 64px; }
   .channel h2 { font-size: 1.35rem; margin: 32px 0 12px; }
   .channel h2 .tag { font-size: .8rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; margin-left: 8px; vertical-align: middle; }
   .tag.stable { background: rgba(63,185,80,.2); color: var(--green); }
   .tag.insider { background: rgba(171,125,248,.2); color: var(--purple); }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+  .colhead { grid-column: span 3; font-size: 1.05rem; font-weight: 700; color: var(--fg);
+    padding: 6px 0 2px; border-bottom: 1px solid var(--border); margin-bottom: 2px; }
+  @media (max-width: 900px) { .colhead { grid-column: span 2; } }
+  @media (max-width: 600px) { .colhead { grid-column: span 1; } }
+  .colhead .updated { float: right; font-weight: 400; font-size: .8rem; color: var(--muted); }
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
-  .card .os { font-weight: 700; font-size: 1.05rem; }
+  .card .os { font-weight: 700; font-size: 1rem; }
   .card .meta { color: var(--muted); font-size: .85rem; word-break: break-all; }
   .card a.btn { display: block; text-align: center; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; padding: 9px 12px; border-radius: 7px; margin-top: auto; }
   .card a.btn:hover { filter: brightness(1.15); }
@@ -46,11 +53,9 @@
 </main>
 <footer>Updated automatically from <code>latest.json</code> metadata &middot; <a id="repo-link" href="#">repo</a></footer>
 <script>
-const repos = { stable: 'https://github.com/mimikkai/mimikkai-editor/releases', insider: 'https://github.com/mimikkai/mimikkai-editor-insiders/releases' };
 document.getElementById('repo-link').href = 'https://github.com/mimikkai/versions';
-function prettyOs(path) {
-  const parts = path.replace(/\\/g, '/').split('/').slice(1)
-    .filter(Boolean);
+
+function prettyOs(parts) {
   const map = { win32: 'Windows', linux: 'Linux', darwin: 'macOS',
     archive: 'archive', system: 'system installer', user: 'user installer',
     msi: 'MSI', 'msi-updates-disabled': 'MSI (no updates)' };
@@ -59,27 +64,79 @@ function prettyOs(path) {
   return variant ? os + ' — ' + variant : os;
 }
 
-async function load(channel, gridId) {
-  const grid = document.getElementById(gridId);
-  const res = await fetch('data/' + channel + '.json');
-  const entries = await res.json(); // [{path, name, productVersion, url}]
-  entries.sort((a, b) => a.path.localeCompare(b.path));
+function ago(ts) {
+  const s = Math.floor((Date.now() - ts) / 1000);
+  if (s < 60) return 'just now';
+  const m = Math.floor(s / 60);
+  if (m < 60) return m + ' min ago';
+  const h = Math.floor(m / 60);
+  if (h < 24) return h + ' h ' + (m % 60) + ' min ago';
+  const d = Math.floor(h / 24);
+  return d + ' day' + (d > 1 ? 's' : '') + ' ago';
+}
+
+const OS_ORDER = { darwin: 0, linux: 1, win32: 2 };
+
+// Split entries into 3 OS columns; returns null (no header) when an OS is missing.
+function buildColumns(entries) {
+  const byOs = new Map();
   for (const e of entries) {
-    const card = document.createElement('div');
-    card.className = 'card';
-    const os = document.createElement('div');
-    os.className = 'os';
-    os.textContent = prettyOs(e.path);
-    const meta = document.createElement('div');
-    meta.className = 'meta';
-    meta.textContent = 'version ' + e.name;
-    const a = document.createElement('a');
-    a.className = 'btn';
-    a.href = e.url;
-    a.textContent = 'Download';
-    card.append(os, meta, a);
-    grid.append(card);
+    const os = e.path.replace(/\\/g, '/').split('/')[1];
+    if (!byOs.has(os)) byOs.set(os, []);
+    byOs.get(os).push(e);
   }
+  const osKeys = [...byOs.keys()].sort((a, b) => (OS_ORDER[a] ?? 9) - (OS_ORDER[b] ?? 9));
+  return osKeys.map(os => ({
+    os,
+    label: ({ darwin: 'macOS', linux: 'Linux', win32: 'Windows' })[os] || os,
+    items: byOs.get(os).sort((a, b) => a.path.localeCompare(b.path)),
+  }));
+}
+
+function makeCard(e) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  const os = document.createElement('div');
+  os.className = 'os';
+  os.textContent = prettyOs(e.path.replace(/\\/g, '/').split('/').slice(1));
+  const meta = document.createElement('div');
+  meta.className = 'meta';
+  meta.textContent = 'version ' + e.name + ' · ' + ago(Number(e.timestamp));
+  const a = document.createElement('a');
+  a.className = 'btn';
+  a.href = e.url;
+  a.textContent = 'Download';
+  card.append(os, meta, a);
+  return card;
+}
+
+function fillGrid(grid, entries) {
+  grid.innerHTML = '';
+  for (const col of buildColumns(entries)) {
+    const head = document.createElement('div');
+    head.className = 'colhead';
+    const label = document.createElement('span');
+    label.textContent = col.label;
+    const latest = Math.max(...col.items.map(e => Number(e.timestamp)));
+    const upd = document.createElement('span');
+    upd.className = 'updated';
+    upd.textContent = 'updated ' + ago(latest);
+    upd.dataset.ts = latest;
+    head.append(label, upd);
+    grid.append(head);
+    for (const e of col.items) grid.append(makeCard(e));
+  }
+}
+
+function tickAgo() {
+  for (const el of document.querySelectorAll('.updated')) el.textContent = 'updated ' + ago(Number(el.dataset.ts));
+}
+setInterval(tickAgo, 30000);
+
+async function load(channel, gridId) {
+  const res = await fetch('data/' + channel + '.json');
+  const entries = await res.json(); // [{path, name, productVersion, url, timestamp}]
+  fillGrid(document.getElementById(gridId), entries);
 }
 
 Promise.all([load('stable', 'stable-grid'), load('insider', 'insider-grid')]).catch(err => {
