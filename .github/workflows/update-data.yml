@@ -33,7 +33,7 @@ jobs:
                 if (e.isDirectory()) walk(p);
                 else if (e.name === 'latest.json') {
                   const j = JSON.parse(fs.readFileSync(p, 'utf8'));
-                  data[ch].push({ path: path.dirname(p), name: j.name, productVersion: j.productVersion, url: j.url });
+                  data[ch].push({ path: path.dirname(p).replace(/\\/g, '/'), name: j.name, productVersion: j.productVersion, url: j.url, timestamp: j.timestamp });
                 }
               }
             })(ch);
