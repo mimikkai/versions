@@ -13,9 +13,9 @@
   },
   {
     "path": "stable/linux/arm64",
-    "name": "1.135.06128",
-    "productVersion": "1.135.6128.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06128/MimikkAI Editor-linux-arm64-1.135.06128.tar.gz"
+    "name": "1.135.06131",
+    "productVersion": "1.135.6131.0",
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06131/MimikkAI Editor-linux-arm64-1.135.06131.tar.gz"
   },
   {
     "path": "stable/linux/x64",
