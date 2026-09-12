@@ -134,7 +134,7 @@ function tickAgo() {
 setInterval(tickAgo, 30000);
 
 async function load(channel, gridId) {
-  const res = await fetch('data/' + channel + '.json');
+  const res = await fetch('data/' + channel + '.json?cb=' + Date.now());
   const entries = await res.json(); // [{path, name, productVersion, url, timestamp}]
   fillGrid(document.getElementById(gridId), entries);
 }
