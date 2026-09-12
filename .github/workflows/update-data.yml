@@ -1,0 +1,58 @@
+name: Update download page data
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'stable/**/latest.json'
+      - 'insider/**/latest.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Regenerate data/*.json
+        run: |
+          node -e "
+          const fs = require('fs'), path = require('path');
+          const data = { stable: [], insider: [] };
+          for (const ch of ['stable', 'insider']) {
+            (function walk(dir) {
+              for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+                const p = path.join(dir, e.name);
+                if (e.isDirectory()) walk(p);
+                else if (e.name === 'latest.json') {
+                  const j = JSON.parse(fs.readFileSync(p, 'utf8'));
+                  data[ch].push({ path: path.dirname(p), name: j.name, productVersion: j.productVersion, url: j.url });
+                }
+              }
+            })(ch);
+          }
+          for (const ch of Object.keys(data)) {
+            data[ch].sort((a, b) => a.path.localeCompare(b.path));
+            fs.writeFileSync('data/' + ch + '.json', JSON.stringify(data[ch], null, 2) + '\n');
+          }
+          console.log('stable:', data.stable.length, 'insider:', data.insider.length);
+          "
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update page data: $(date -u +%Y-%m-%d\ %H:%M:%S) UTC"
+            git push
+          fi
