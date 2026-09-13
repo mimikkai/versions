@@ -1,0 +1,61 @@
+name: Check download links
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'data/*.json'
+  schedule:
+    - cron: '0 6 * * *' # daily: catch assets deleted from releases
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check all download URLs
+        run: |
+          node -e "
+          const http = require('http'), https = require('https');
+          const data = require('./data/stable.json').concat(require('./data/insider.json'));
+
+          function head(url) {
+            return new Promise((resolve) => {
+              const req = (url.startsWith('https:') ? https : http).request(url, { method: 'HEAD' }, (res) => {
+                // GitHub redirects release downloads to a signed S3 URL
+                if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+                  res.resume();
+                  head(res.headers.location).then(resolve);
+                } else {
+                  res.resume();
+                  resolve(res.statusCode);
+                }
+              });
+              req.on('error', () => resolve(0));
+              req.end();
+            });
+          }
+
+          (async () => {
+            let failed = 0;
+            for (const e of data) {
+              const status = await head(e.url);
+              if (status !== 200) {
+                failed++;
+                console.error(\`BROKEN [\${status}]: \${e.path} -> \${e.url}\`);
+              } else {
+                console.log(\`OK [\${status}]: \${e.path}\`);
+              }
+            }
+            if (failed > 0) {
+              console.error(\`\${failed} of \${data.length} links are broken\`);
+              process.exit(1);
+            }
+            console.log(\`All \${data.length} links are OK\`);
+          })();
+          "
