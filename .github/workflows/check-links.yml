@@ -44,12 +44,15 @@ jobs:
           (async () => {
             let failed = 0;
             for (const e of data) {
-              const status = await head(e.url);
-              if (status !== 200) {
-                failed++;
-                console.error(\`BROKEN [\${status}]: \${e.path} -> \${e.url}\`);
-              } else {
-                console.log(\`OK [\${status}]: \${e.path}\`);
+              const links = e.dmg ? [['url', e.url], ['dmg', e.dmg]] : [['url', e.url]];
+              for (const [field, url] of links) {
+                const status = await head(url);
+                if (status !== 200) {
+                  failed++;
+                  console.error(\`BROKEN [\${status}]: \${e.path} (\${field}) -> \${url}\`);
+                } else {
+                  console.log(\`OK [\${status}]: \${e.path} (\${field})\`);
+                }
               }
             }
             if (failed > 0) {
