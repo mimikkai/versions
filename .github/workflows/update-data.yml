@@ -33,9 +33,12 @@ jobs:
                 if (e.isDirectory()) walk(p);
                 else if (e.name === 'latest.json') {
                   const j = JSON.parse(fs.readFileSync(p, 'utf8'));
-                  data[ch].push({ path: path.dirname(p).split(path.sep).join('/'), name: j.name, productVersion: j.productVersion, url: j.url, timestamp: j.timestamp });
+                  const entry = { path: path.dirname(p).split(path.sep).join('/'), name: j.name, productVersion: j.productVersion, url: j.url, timestamp: j.timestamp };
+                  // Derive DMG download URL for macOS entries (zip asset is the updater feed; DMG is the user-facing installer)
+                  const m = entry.url.match(/(MimikkAI\.Editor)-darwin-(arm64|x64)-([0-9.]+(?:-insider)?)\.zip$/);
+                  if (m) entry.dmg = entry.url.replace(/MimikkAI\.Editor-darwin-(arm64|x64)-([0-9.]+(?:-insider)?)\.zip$/, m[1] + '.' + m[2] + '.' + m[3] + '.dmg');
+                  data[ch].push(entry);
                 }
-              }
             })(ch);
           }
           for (const ch of Object.keys(data)) {

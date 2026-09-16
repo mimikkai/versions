@@ -4,14 +4,16 @@
     "name": "1.135.06131",
     "productVersion": "1.135.6131.0",
     "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06131/MimikkAI.Editor-darwin-arm64-1.135.06131.zip",
-    "timestamp": "1789219870217"
+    "timestamp": "1789219870217",
+    "dmg": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06131/MimikkAI.Editor.arm64.1.135.06131.dmg"
   },
   {
     "path": "stable/darwin/x64",
     "name": "1.135.06131",
     "productVersion": "1.135.6131.0",
     "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06131/MimikkAI.Editor-darwin-x64-1.135.06131.zip",
-    "timestamp": "1789218544481"
+    "timestamp": "1789218544481",
+    "dmg": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06131/MimikkAI.Editor.x64.1.135.06131.dmg"
   },
   {
     "path": "stable/linux/arm64",

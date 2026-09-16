@@ -30,8 +30,9 @@
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
   .card .os { font-weight: 700; font-size: 1rem; }
   .card .meta { color: var(--muted); font-size: .85rem; word-break: break-all; }
-  .card a.btn { display: block; text-align: center; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; padding: 9px 12px; border-radius: 7px; margin-top: auto; }
-  .card a.btn:hover { filter: brightness(1.15); }
+  .card .btn-row { display: flex; gap: 8px; margin-top: auto; }
+  .card a.btn { display: block; flex: 1; text-align: center; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; padding: 9px 12px; border-radius: 7px; margin-top: auto; }
+  .card a.btn-alt { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
   footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 16px; }
   a { color: var(--accent); }
 </style>
@@ -102,11 +103,27 @@ function makeCard(e) {
   const meta = document.createElement('div');
   meta.className = 'meta';
   meta.textContent = 'version ' + e.name + ' · ' + ago(Number(e.timestamp));
-  const a = document.createElement('a');
-  a.className = 'btn';
-  a.href = e.url;
-  a.textContent = 'Download';
-  card.append(os, meta, a);
+  const isMac = e.path.includes('darwin');
+  if (isMac && e.dmg) {
+    const row = document.createElement('div');
+    row.className = 'btn-row';
+    const d = document.createElement('a');
+    d.className = 'btn';
+    d.href = e.dmg;
+    d.textContent = 'Download DMG';
+    const z = document.createElement('a');
+    z.className = 'btn btn-alt';
+    z.href = e.url;
+    z.textContent = 'Download ZIP';
+    row.append(d, z);
+    card.append(os, meta, row);
+  } else {
+    const a = document.createElement('a');
+    a.className = 'btn';
+    a.href = e.url;
+    a.textContent = 'Download';
+    card.append(os, meta, a);
+  }
   return card;
 }
 
