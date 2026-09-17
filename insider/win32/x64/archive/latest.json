@@ -1,9 +1,9 @@
 {
-  "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06039-insider/MimikkAI.Editor-win32-x64-1.135.06039-insider.zip",
-  "name": "1.135.06039-insider",
-  "version": "23c5246d7ca9e448ee68652c66cdaeb6eafe4de5",
-  "productVersion": "1.135.6039.0-insider",
-  "hash": "69afa1ae43410b8366a7dc256885b63890551d06",
-  "timestamp": "1788894370441",
-  "sha256hash": "655fc1d8a59cf6862b1aa40fbbe69e69d509be922e8e83be5be0d6dc59ecf811"
+  "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06131-insider/MimikkAI Editor-win32-x64-1.135.06131-insider.zip",
+  "name": "1.135.06131-insider",
+  "version": "5f6c3598979c1721f0178ef1b6ac54122914a7cb",
+  "productVersion": "1.135.6131.0-insider",
+  "hash": "3675fd12d26d280969c8d590cd0c478849119717",
+  "timestamp": "1789648756002",
+  "sha256hash": "4baf899477b1cb294f173ab9cbaf67ecf5694b2cd18d91f369b678aca18a92f1"
 }
