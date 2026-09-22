@@ -31,24 +31,24 @@
   },
   {
     "path": "stable/win32/arm64/archive",
-    "name": "1.135.06353",
-    "productVersion": "1.135.6353.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06353/MimikkAI.Editor-win32-arm64-1.135.06353.zip",
-    "timestamp": "1790015360554"
+    "name": "1.135.06380",
+    "productVersion": "1.135.6380.0",
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06380/MimikkAI.Editor-win32-arm64-1.135.06380.zip",
+    "timestamp": "1790111963736"
   },
   {
     "path": "stable/win32/arm64/system",
-    "name": "1.135.06353",
-    "productVersion": "1.135.6353.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06353/MimikkAI.EditorSetup-arm64-1.135.06353.exe",
-    "timestamp": "1790015352744"
+    "name": "1.135.06380",
+    "productVersion": "1.135.6380.0",
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06380/MimikkAI.EditorSetup-arm64-1.135.06380.exe",
+    "timestamp": "1790111956008"
   },
   {
     "path": "stable/win32/arm64/user",
-    "name": "1.135.06353",
-    "productVersion": "1.135.6353.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06353/MimikkAI.EditorUserSetup-arm64-1.135.06353.exe",
-    "timestamp": "1790015356761"
+    "name": "1.135.06380",
+    "productVersion": "1.135.6380.0",
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06380/MimikkAI.EditorUserSetup-arm64-1.135.06380.exe",
+    "timestamp": "1790111959912"
   },
   {
     "path": "stable/win32/x64/archive",
