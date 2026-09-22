@@ -1,9 +1,9 @@
 {
-  "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06355-insider/MimikkAI.EditorSetup-arm64-1.135.06355-insider.exe",
-  "name": "1.135.06355-insider",
-  "version": "f936e64e76093574064499c05cb089ff0598b76c",
-  "productVersion": "1.135.6355.0-insider",
-  "hash": "2152235423968a22a34e2fc4e1729ba0c550a246",
-  "timestamp": "1790023993726",
-  "sha256hash": "c0b434657ba625816bb6d833552eba63e709386fd90e87109d9cf28d43181611"
+  "url": "https://github.com/mimikkai/mimikkai-editor-insiders/releases/download/1.135.06380-insider/MimikkAI.EditorSetup-arm64-1.135.06380-insider.exe",
+  "name": "1.135.06380-insider",
+  "version": "b8558e57092da8b29d586bf5e36cd556d255fb55",
+  "productVersion": "1.135.6380.0-insider",
+  "hash": "9bb106b0fc94d386dac310c7125a3dbfc4f6953b",
+  "timestamp": "1790111101078",
+  "sha256hash": "39eaed9e960a34a0abacc7759c5a3b71d7432cfc702ee4f6b8ca4c47af73389c"
 }
