@@ -17,17 +17,17 @@
   },
   {
     "path": "stable/linux/arm64",
-    "name": "1.135.06353",
-    "productVersion": "1.135.6353.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06353/MimikkAI.Editor-linux-arm64-1.135.06353.tar.gz",
-    "timestamp": "1790013249958"
+    "name": "1.135.06380",
+    "productVersion": "1.135.6380.0",
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06380/MimikkAI.Editor-linux-arm64-1.135.06380.tar.gz",
+    "timestamp": "1790109927248"
   },
   {
     "path": "stable/linux/x64",
-    "name": "1.135.06353",
-    "productVersion": "1.135.6353.0",
-    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06353/MimikkAI.Editor-linux-x64-1.135.06353.tar.gz",
-    "timestamp": "1790013107550"
+    "name": "1.135.06380",
+    "productVersion": "1.135.6380.0",
+    "url": "https://github.com/mimikkai/mimikkai-editor/releases/download/1.135.06380/MimikkAI.Editor-linux-x64-1.135.06380.tar.gz",
+    "timestamp": "1790110129675"
   },
   {
     "path": "stable/win32/arm64/archive",
